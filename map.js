@@ -5,8 +5,17 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: uek,
-        
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+  styles: [
+    {
+      "featureType": "poi",
+      "stylers": [
+        { "visibility": "off" }
+      ]
+    }
+  ]
     });
+   
     var contentString = '<style>#bodyContent{} img{width: 80%; height: 80%; display: block; margin-left: auto; margin-right: auto} #image{}</style><div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +
