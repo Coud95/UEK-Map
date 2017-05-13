@@ -6,16 +6,16 @@ function initMap() {
         zoom: 18,
         center: uek,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-  styles: [
-    {
-      "featureType": "poi",
-      "stylers": [
-        { "visibility": "off" }
-      ]
-    }
-  ]
+        styles: [
+            {
+                "featureType": "poi",
+                "stylers": [
+                    { "visibility": "off" }
+                ]
+            }
+        ]
     });
-   
+
     var contentString = '<style>#bodyContent{} img{width: 80%; height: 80%; display: block; margin-left: auto; margin-right: auto} #image{}</style><div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +
@@ -27,7 +27,7 @@ function initMap() {
         '<p><b>Biblioteka Główna Uniwersytetu Ekonomicznego w Krakowie</b> międzywydziałowa jednostka prowadzącą działalność usługową, dydaktyczną i naukową. Służy także całemu środowisku naukowemu Krakowa i Małopolski. Jest to trzecia co do wielkości biblioteka akademicka Krakowa i druga co do wielkości biblioteka ekonomiczna w Polsce. Zakres tematyczny zbiorów odpowiada profilowi wydziałów Uczelni i obejmuje: nauki ekonomiczne, finanse, zarządzanie, towaroznawstwo oraz nauki społeczne i humanistyczne, a także niektóre nauki techniczne i informatykę.' +
         '</div>' +
         '</div>';
-        var ikona = 'http://maps.google.com/mapfiles/kml/pal3/icon20.png';
+    var ikona = 'http://maps.google.com/mapfiles/kml/pal3/icon20.png';
 
     var biblioteka = new google.maps.Marker({
         position: biblioteka,
@@ -44,5 +44,7 @@ function initMap() {
         maxWidth: 400
     });
 }
+
+
 
 
