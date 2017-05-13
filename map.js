@@ -14,6 +14,7 @@ function initMap() {
             }
         ]
     });
+
     var infoWindowStyle = '<style>#bodyContent{margin-top: 10px; margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 80%; height: 80%; display: block; margin-left: auto; margin-right: auto} </style>';
     var infoWindowStyleLargePicture = '<style>#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 60%; height: 60%; display: block; margin-left: auto; margin-right: auto;padding:1px; border:1px solid #000; background-color:#000;} </style>';
     var infoWindowStyleVeryLargePicture = '<style>#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 40%; height: 40%; display: block; margin-left: auto; margin-right: auto} </style>';
@@ -32,6 +33,7 @@ function initMap() {
         '</div>' +
         '</div>';
     var libraryIcon = 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/yellow_MarkerB.png';
+    var ikona = 'http://maps.google.com/mapfiles/kml/pal3/icon20.png';
 
     var libraryMarker = new google.maps.Marker({
         position: libraryPosition,
@@ -320,5 +322,7 @@ function initMap() {
     });
 
 }
+
+
 
 
