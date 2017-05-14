@@ -37,7 +37,13 @@ function initMap() {
         ['Przystanek autobusowy Rondo Mogilskie', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=Um9uZG8gTW9naWxza2ll" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
         ['Przystanek autobusowy Brodowicza', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=QnJvZG93aWN6YQeEeeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
         ['Przystanek tramwajowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Znak_D-17.svg/820px-Znak_D-17.svg.png" />', infoWindowStyleVeryLargePicture],
-        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Znak_D-17.svg/820px-Znak_D-17.svg.png" />', infoWindowStyleVeryLargePicture]
+        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Znak_D-17.svg/820px-Znak_D-17.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Budynek Główny', '...', '<img class="placeImage" src="http://www.kpaz.uek.krakow.pl/wp-content/uploads/2014/04/g3.jpg" />', infoWindowStyleLargePicture],
+        ['Pawilon Księżówka', '...', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Akademia_Ekonomiczna_w_Krakowie_Pawilon_K_Ksiezowka.JPG/250px-Akademia_Ekonomiczna_w_Krakowie_Pawilon_K_Ksiezowka.JPG" />', infoWindowStyle],
+        ['Klub Grota', '...', '<img class="placeImage" src="http://i.imgur.com/oT1ZU7K.jpg" />', infoWindowStyleLargePicture],
+        ['zaUEK', '...', '<img class="placeImage" src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c82.0.915.915/15876048_941033632664263_7642127037389340672_n.jpg" />', infoWindowStyleLargePicture],
+        ['Pokusa', '...', '<img class="placeImage" src="http://wizard.ae.krakow.pl/~knpi/konferencja/pictures/barpokusa.jpg" />', infoWindowStyle],
+        ['Bułka z makiem', '...', '<img class="placeImage" src="https://igx.4sqi.net/img/general/width960/64798282_pOUfR6n4De1jp_JLgji8Q8mbxQfoIXAuZyQgnCks5YQ.jpg" />', infoWindowStyleLargePicture]
     ];
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
@@ -72,7 +78,13 @@ function initMap() {
         ['Przystanek autobusowy Rondo Mogilskie', 50.067122, 19.959740, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[13]],
         ['Przystanek autobusowy Brodowicza', 50.069095, 19.961083, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[14]],
         ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.068377, 19.952605, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[15]],
-        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.067611, 19.952288, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[16]]
+        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.067611, 19.952288, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[16]],
+        ['Budynek Główny', 50.068509, 19.953783, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/orange_MarkerB.png', placeContent[17]],
+        ['Pawilon Księżówka', 50.069163, 19.954131, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerK.png', placeContent[18]],
+        ['Klub Grota', 50.069213, 19.953986, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/bar.png', placeContent[19]],
+        ['zaUEK', 50.068987, 19.955868, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/coffee.png', placeContent[20]],
+        ['Pokusa', 50.069299, 19.954807, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/restaurant.png', placeContent[21]],
+        ['Bułka z makiem', 50.068340, 19.956864, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/restaurant.png', placeContent[22]]
     ];
 
     var infoWindow = [];
