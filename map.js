@@ -15,9 +15,9 @@ function initMap() {
         ]
     });
 
-    var infoWindowStyle = '<style>#bodyContent{margin-top: 10px; margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 80%; height: 80%; display: block; margin-left: auto; margin-right: auto} </style>';
-    var infoWindowStyleLargePicture = '<style>#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 60%; height: 60%; display: block; margin-left: auto; margin-right: auto;padding:1px; border:1px solid #000; background-color:#000;} </style>';
-    var infoWindowStyleVeryLargePicture = '<style>#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 40%; height: 40%; display: block; margin-left: auto; margin-right: auto} </style>';
+    var infoWindowStyle = '<style>a{text-decoration: none; color: red; font-weight: bold} a:hover {color: blue; text-decoration: none; font-weight: bold} #bodyContent{margin-top: 10px; margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 80%; height: 80%; display: block; margin-left: auto; margin-right: auto} </style>';
+    var infoWindowStyleLargePicture = '<style>a{text-decoration: none; color: red; font-weight: bold} a:hover {color: blue; text-decoration: none; font-weight: bold}#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 60%; height: 60%; display: block; margin-left: auto; margin-right: auto;padding:1px; border:1px solid #000; background-color:#000;} </style>';
+    var infoWindowStyleVeryLargePicture = '<style>a{text-decoration: none; color: red; font-weight: bold} a:hover {color: blue; text-decoration: none; font-weight: bold}#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 40%; height: 40%; display: block; margin-left: auto; margin-right: auto} </style>';
 
     // Name of the place, description, image, image style
     var contents = [
@@ -31,6 +31,13 @@ function initMap() {
         ['Pawilon G', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/wybrane_zdjecia_uek/Nowy%20Pawilon%20G%20UEK.jpg" />', infoWindowStyleLargePicture],
         ['Pawilon Ustronie', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie06.jpg" />', infoWindowStyleLargePicture],
         ['Pawilon Sportowo-dydaktyczny', '...', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Akademia_Ekonomiczna_w_Krakowie_Basen.JPG" />', infoWindowStyleLargePicture],
+        ['Przystanek autobusowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Przystanek autobusowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Przystanek autobusowy Rondo Mogilskie', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=Um9uZG8gTW9naWxza2ll" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Przystanek autobusowy Rondo Mogilskie', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=Um9uZG8gTW9naWxza2ll" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Przystanek autobusowy Brodowicza', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=QnJvZG93aWN6YQeEeeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Znak_D-15.svg/820px-Znak_D-15.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Znak_D-17.svg/820px-Znak_D-17.svg.png" />', infoWindowStyleVeryLargePicture],
+        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=VW5pd2Vyc3l0ZXQgRWtvbm9taWN6bnkeEe" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Znak_D-17.svg/820px-Znak_D-17.svg.png" />', infoWindowStyleVeryLargePicture]
     ];
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
@@ -58,7 +65,14 @@ function initMap() {
         ['Pawilon F', 50.068399, 19.956556, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerF.png', placeContent[6]],
         ['Pawilon G', 50.069521, 19.953867, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerG.png', placeContent[7]],
         ['Pawilon Ustronie', 50.067984, 19.955589, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerU.png', placeContent[8]],
-        ['Pawilon Sportowo-dydaktyczny', 50.068066, 19.956422, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerS.png', placeContent[9]]
+        ['Pawilon Sportowo-dydaktyczny', 50.068066, 19.956422, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerS.png', placeContent[9]],
+        ['Przystanek autobusowy Uniwersytet Ekonomiczny', 50.067702, 19.953028, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[10]],
+        ['Przystanek autobusowy Uniwersytet Ekonomiczny', 50.068333, 19.951752, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[11]],
+        ['Przystanek autobusowy Rondo Mogilskie', 50.067087, 19.957855, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[12]],
+        ['Przystanek autobusowy Rondo Mogilskie', 50.067122, 19.959740, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[13]],
+        ['Przystanek autobusowy Brodowicza', 50.069095, 19.961083, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[14]],
+        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.068377, 19.952605, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[15]],
+        ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.067611, 19.952288, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[16]]
     ];
 
     var infoWindow = [];
