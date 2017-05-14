@@ -48,7 +48,10 @@ function initMap() {
         ['Kort tenisowy', '...', '<img class="placeImage" src="http://www.tenisbytow.pl/assets/tenisbytow/img/foto-1b.jpg" />', infoWindowStyleLargePicture],
         ['Basen UEK', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Sportowy/uek_basen01.jpg" />', infoWindowStyleLargePicture],
         ['Dworzec autobusowy Kraków', '...', '<img class="placeImage" src="http://mda.malopolska.pl/upload/_PUL4247%20kopia(1).jpg" />', infoWindowStyleLargePicture],
-        ['Dworzec PKP Kraków', '...', '<img class="placeImage" src="http://pkpsa.pl/images/miasta/940x653xIMG_0246_1.jpg.pagespeed.ic.ClnT-eEpxG.jpg" />', infoWindowStyleLargePicture]
+        ['Dworzec PKP Kraków', '...', '<img class="placeImage" src="http://pkpsa.pl/images/miasta/940x653xIMG_0246_1.jpg.pagespeed.ic.ClnT-eEpxG.jpg" />', infoWindowStyleLargePicture],
+        ['Stróżówka', '...', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Akademia_Ekonomiczna_w_Krakowie_Pawilon_H.JPG/250px-Akademia_Ekonomiczna_w_Krakowie_Pawilon_H.JPG" />', infoWindowStyle],
+        ['Pętla autobusowa Dworzec Główny Wschód', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=RHdvcnplYyBHxYLDs3dueSBXc2Now7Nk" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="http://kgnat.pl/album56_mpk2014/mpk2014/25_dworzec.jpg" />', infoWindowStyle],
+        ['Galeria Krakowska', '...', '<img class="placeImage" src="http://www.galeriakrakowska.pl/thumbs/resize/900x0/i/filemanager/obiekty/picture/obiekt_457/STA_5737.JPG" />', infoWindowStyleLargePicture]
     ];
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
@@ -87,14 +90,17 @@ function initMap() {
         ['Budynek Główny', 50.068410, 19.954111, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/orange_MarkerB.png', placeContent[17]],
         ['Pawilon Księżówka', 50.069163, 19.954131, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerK.png', placeContent[18]],
         ['Klub Grota', 50.069213, 19.953986, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/bar.png', placeContent[19]],
-        ['zaUEK', 50.068987, 19.955868, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/coffee.png', placeContent[20]],
+        ['zaUEK', 50.069027, 19.955828, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/coffee.png', placeContent[20]],
         ['Pokusa', 50.069299, 19.954807, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/restaurant.png', placeContent[21]],
         ['Bułka z makiem', 50.068340, 19.956864, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/restaurant.png', placeContent[22]],
         ['Sklep', 50.068956, 19.954402, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/conveniencestore.png', placeContent[23]],
         ['Kort tenisowy', 50.068087, 19.954615, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tenniscourt.png', placeContent[24]],
         ['Basen UEK', 50.067861, 19.956895, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/swimming2.png', placeContent[25]],
         ['Dworzec autobusowy Kraków', 50.067809, 19.949147, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/bus.png', placeContent[26]],
-        ['Dworzec PKP Kraków', 50.067941, 19.947838, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/train.png', placeContent[27]]
+        ['Dworzec PKP Kraków', 50.067941, 19.947838, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/train.png', placeContent[27]],
+        ['Stróżówka', 50.069095, 19.953464, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/police.png', placeContent[28]],
+        ['Pętla autobusowa Dworzec Główny Wschód', 50.068590, 19.949332, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[29]],
+        ['Galeria Krakowska', 50.067239, 19.946073, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/mall.png', placeContent[30]]
     ];
 
     var infoWindow = [];
