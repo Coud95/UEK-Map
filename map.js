@@ -46,7 +46,9 @@ function initMap() {
         ['Bułka z makiem', '...', '<img class="placeImage" src="https://igx.4sqi.net/img/general/width960/64798282_pOUfR6n4De1jp_JLgji8Q8mbxQfoIXAuZyQgnCks5YQ.jpg" />', infoWindowStyleLargePicture],
         ['Sklep', '...', '<img class="placeImage" src="http://ulicaekologiczna.pl/wp-content/uploads/2013/08/sklepik5.jpg" />', infoWindowStyleLargePicture],
         ['Kort tenisowy', '...', '<img class="placeImage" src="http://www.tenisbytow.pl/assets/tenisbytow/img/foto-1b.jpg" />', infoWindowStyleLargePicture],
-        ['Basen UEK', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Sportowy/uek_basen01.jpg" />', infoWindowStyleLargePicture]
+        ['Basen UEK', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Sportowy/uek_basen01.jpg" />', infoWindowStyleLargePicture],
+        ['Dworzec autobusowy Kraków', '...', '<img class="placeImage" src="http://mda.malopolska.pl/upload/_PUL4247%20kopia(1).jpg" />', infoWindowStyleLargePicture],
+        ['Dworzec PKP Kraków', '...', '<img class="placeImage" src="http://pkpsa.pl/images/miasta/940x653xIMG_0246_1.jpg.pagespeed.ic.ClnT-eEpxG.jpg" />', infoWindowStyleLargePicture]
     ];
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
@@ -90,7 +92,9 @@ function initMap() {
         ['Bułka z makiem', 50.068340, 19.956864, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/restaurant.png', placeContent[22]],
         ['Sklep', 50.068956, 19.954402, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/conveniencestore.png', placeContent[23]],
         ['Kort tenisowy', 50.068087, 19.954615, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tenniscourt.png', placeContent[24]],
-        ['Basen UEK', 50.067861, 19.956895, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/swimming2.png', placeContent[25]]
+        ['Basen UEK', 50.067861, 19.956895, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/swimming2.png', placeContent[25]],
+        ['Dworzec autobusowy Kraków', 50.067809, 19.949147, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/bus.png', placeContent[26]],
+        ['Dworzec PKP Kraków', 50.067941, 19.947838, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/train.png', placeContent[27]]
     ];
 
     var infoWindow = [];
