@@ -13,7 +13,15 @@ function initMap() {
                 ]
             }
         ]
+
     });
+    google.maps.event.addDomListener(window, 'resize', function () {
+        var center = map.getCenter();
+        map.setCenter(center);
+    });
+    google.maps.event.trigger(map, "resize");
+
+
 
     var infoWindowStyle = '<style>a{text-decoration: none; color: red; font-weight: bold} a:hover {color: blue; text-decoration: none; font-weight: bold} #bodyContent{margin-top: 10px; margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 80%; height: 80%; display: block; margin-left: auto; margin-right: auto; padding:1px; border:1px solid #000; background-color:#000;} </style>';
     var infoWindowStyleLargePicture = '<style>a{text-decoration: none; color: red; font-weight: bold} a:hover {color: blue; text-decoration: none; font-weight: bold}#content {}#bodyContent{margin-top: 10px; margin-left: auto; margin-right: auto} .firstHeading{text-align: center; background: #2B2B2B; color: #F6F6F6} .placeImage{width: 60%; height: 60%; display: block; margin-left: auto; margin-right: auto;padding:1px; border:1px solid #000; background-color:#000;} </style>';
@@ -64,7 +72,7 @@ function initMap() {
             content[2] +
             '</div>' +
             '<div id="bodyContent">' +
-            '<p><b>' + content[0] +'</b> ' + content[1]  +
+            '<p><b>' + content[0] + '</b> ' + content[1] +
             '</div>' +
             '</div>';
     }
