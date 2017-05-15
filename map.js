@@ -134,10 +134,10 @@ function initMap() {
         markers.push(marker);
 
     }
-    for (var i = 0; i < markers.length; i++) {
-        console.log(markers[i]);
-    }
-    console.log(initMap());
+    
+        console.log(markers);
+
+   
     return markers;
     
     
