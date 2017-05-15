@@ -25,20 +25,41 @@
                 <button class="btn btn-default navbar-btn" onclick="suggestions();">Sugestie</button>
                 <button class="btn btn-default navbar-btn" onclick="authors();">Autorzy</button>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="navbar-text"><b>Kraków:</b> temperatura: <b id="temp"></b>°C, ciśnienie: <b id="pressure"></b> hPa, pogoda: <b id="description"></b></li>
+                <script>
+                    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Cracow&lang=pl&units=metric&appid=c16afc34bc4cb294a463d302fbf03e1b", function (json) {
+                        $('#temp').html(json.main.temp);
+                        $('#pressure').append(json.main.pressure);
+                        $('#description').append(json.weather[0].description);
+                    });
+                </script>
+            </ul>
         </div>
     </nav>
-    <div id="content">
+    <div id="content" class="col-sm-9">
         <div id="map" onload="initMap();" class="container-fluid"></div>
     </div>
-    <script>
-        function suggestions() {
-            $("#content").load("suggestions.html");
-        }
 
-        function authors() {
-            $("#content").load("authors.html");
-        }
-    </script>
+    <div class="col-sm-3 sidenav">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Szukaj miejsca..">
+            <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+        </div>
+        <script>
+            function suggestions() {
+                $("#content").load("suggestions.html");
+            }
+
+            function authors() {
+                $("#content").load("authors.html");
+            }
+        </script>
+
 </body>
 
 </html>
