@@ -1,3 +1,18 @@
 #map {
             height: 500px;
         }
+#floating-panel {
+        
+        margin-top: 5px;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        font-size: 20px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        
+      }
+#search{
+    height: 500px;
+}
