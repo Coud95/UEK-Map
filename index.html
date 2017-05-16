@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <div class="navbar-header">
+            <div class="navbar-header" >
                 <a class="navbar-brand">UEK Map</a>
             </div>
             <ul class="nav navbar-nav">
@@ -41,7 +41,7 @@
         <div id="map" onload="initMap();" class="container-fluid"></div>
     </div>
 
-    <div class="col-sm-3 sidenav">
+    <div class="col-sm-3 sidenav" id="search">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Szukaj miejsca..">
             <span class="input-group-btn">
@@ -50,11 +50,21 @@
             </button>
             </span>
         </div>
+    </div>
+    
+    <div id="floating-panel">
+      <input onclick="showPavilion();" type=button value="Pawilony">
+      <input onclick="showFood();" type=button value="Jedzenie">
+	  <input onclick="showStops();" type=button value="Przystanki">
+	  <input onclick="showSportObjects();" type=button value="Sport">
+      <input onclick="showAll();" type=button value="Wszystko">
+	  
+    </div>
+   
         <script>
             function suggestions() {
                 $("#content").load("suggestions.html");
             }
-
             function authors() {
                 $("#content").load("authors.html");
             }
