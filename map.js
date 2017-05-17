@@ -73,7 +73,7 @@ function initMap() {
         ['Kawka i mleczko', '- kawiarnia mieszcząca się na poziomie -1 pawilonu C.', '<img class="placeImage" src="http://i.imgur.com/tf00z0m.jpg" />', infoWindowStyleLargePicture],
         ['Parking pod Budynkiem Głównym', '- znajduje się blisko Budynku Głównego. Jest przeznaczony dla pracowników UEK. Parkuje tam kilkadziesiąt samochodów.', '<img class="placeImage" src="http://i.imgur.com/u5laHyd.jpg" />', infoWindowStyleLargePicture],
         ['Parking pod pawilonem sportowo-dydaktycznym', '- znajduje się blisko pawilonu Sportowo-dydaktycznego. Jest przeznaczony dla pracowników UEK. Parkuje tam kilkadziesiąt samochodów.', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture],
-        ['Siłownia', '- znajduje się na poziomie -1 pawilonu C, po prawej stronie od szatni.', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture]
+        ['Siłownia', '- znajduje się na poziomie -1 pawilonu C, po prawej stronie od szatni.', '<img class="placeImage" src="http://i.imgur.com/wImx5MW.jpg" />', infoWindowStyleLargePicture]
     ];
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
