@@ -37,32 +37,34 @@
             </ul>
         </div>
     </nav>
-    <div id="content" class="col-sm-9">
-        <div id="map" onload="initMap();" class="container-fluid"></div>
-    </div>
-
-    <div class="col-sm-3 sidenav" id="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Szukaj miejsca..">
-            <span class="input-group-btn">
+    <div id="content">
+        <div class="col-sm-9">
+            <div id="map" onload="initMap();" class="container-fluid"></div>
+        </div>
+        <div class="col-sm-3 sidenav" id="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Szukaj miejsca..">
+                <span class="input-group-btn">
           <button class="btn btn-default" type="button">
             <span class="glyphicon glyphicon-search"></span>
-            </button>
-            </span>
-        </div>
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Znaczniki
+                </button>
+                </span>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Znaczniki
     <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showPavilion();">Pawilony</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showFood();">Jedzenie</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showStops();">Przystanki</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showSportObjects();">Sport</a></li>
-                <li role="presentation" class="divider"></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showAll();">Wszystko</a></li>
-            </ul>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showPavilion();">Pawilony</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showFood();">Jedzenie</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showStops();">Przystanki</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showSportObjects();">Sport</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showAll();">Wszystko</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+
 
     <script>
         function suggestions() {
