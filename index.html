@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <div class="navbar-header" >
+            <div class="navbar-header">
                 <a class="navbar-brand">UEK Map</a>
             </div>
             <ul class="nav navbar-nav">
@@ -50,25 +50,28 @@
             </button>
             </span>
         </div>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Znaczniki
+    <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showPavilion();">Pawilony</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showFood();">Jedzenie</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showStops();">Przystanki</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showSportObjects();">Sport</a></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" onclick="showAll();">Wszystko</a></li>
+            </ul>
+        </div>
     </div>
-    
-    <div id="floating-panel">
-      <input onclick="showPavilion();" type=button value="Pawilony">
-      <input onclick="showFood();" type=button value="Jedzenie">
-	  <input onclick="showStops();" type=button value="Przystanki">
-	  <input onclick="showSportObjects();" type=button value="Sport">
-      <input onclick="showAll();" type=button value="Wszystko">
-	  
-    </div>
-   
-        <script>
-            function suggestions() {
-                $("#content").load("suggestions.html");
-            }
-            function authors() {
-                $("#content").load("authors.html");
-            }
-        </script>
+
+    <script>
+        function suggestions() {
+            $("#content").load("suggestions.html");
+        }
+        function authors() {
+            $("#content").load("authors.html");
+        }
+    </script>
 
 </body>
 
