@@ -59,7 +59,20 @@ function initMap() {
         ['Dworzec PKP Kraków', '...', '<img class="placeImage" src="http://pkpsa.pl/images/miasta/940x653xIMG_0246_1.jpg.pagespeed.ic.ClnT-eEpxG.jpg" />', infoWindowStyleLargePicture],
         ['Dom Ogrodnika', '...', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Akademia_Ekonomiczna_w_Krakowie_Pawilon_H.JPG/250px-Akademia_Ekonomiczna_w_Krakowie_Pawilon_H.JPG" />', infoWindowStyle],
         ['Pętla autobusowa Dworzec Główny Wschód', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=RHdvcnplYyBHxYLDs3dueSBXc2Now7Nk" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="http://kgnat.pl/album56_mpk2014/mpk2014/25_dworzec.jpg" />', infoWindowStyle],
-        ['Galeria Krakowska', '...', '<img class="placeImage" src="http://www.galeriakrakowska.pl/thumbs/resize/900x0/i/filemanager/obiekty/picture/obiekt_457/STA_5737.JPG" />', infoWindowStyleLargePicture]
+        ['Galeria Krakowska', '...', '<img class="placeImage" src="http://www.galeriakrakowska.pl/thumbs/resize/900x0/i/filemanager/obiekty/picture/obiekt_457/STA_5737.JPG" />', infoWindowStyleLargePicture],
+        ['Stróżówka', '...', '<img class="placeImage" src="http://i.imgur.com/oIuRSUk.png" />', infoWindowStyleLargePicture],
+        ['Paczkomat InPost', '...', '<img class="placeImage" src="http://i.imgur.com/oIuRSUk.png" />', infoWindowStyleLargePicture],
+        ['Parking podziemny UEK', '...', '<img class="placeImage" src="http://i.imgur.com/oIuRSUk.png" />', infoWindowStyleLargePicture],
+        ['SJO UEK', '...', '<img class="placeImage" src="https://cj.uek.krakow.pl/sjo_uek.jpg" />', infoWindowStyle],
+        ['Wejście na UEK', '...', '<img class="placeImage" src="https://cj.uek.krakow.pl/sjo_uek.jpg" />', infoWindowStyleLargePicture],
+        ['Wejście na UEK', '...', '<img class="placeImage" src="https://cj.uek.krakow.pl/sjo_uek.jpg" />', infoWindowStyleLargePicture],
+        ['Wejście na UEK', '...', '<img class="placeImage" src="https://cj.uek.krakow.pl/sjo_uek.jpg" />', infoWindowStyleLargePicture],
+        ['Wejście na UEK', '...', '<img class="placeImage" src="https://cj.uek.krakow.pl/sjo_uek.jpg" />', infoWindowStyleLargePicture],
+        ['Stołówka', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture],
+        ['Boisko', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture],
+        ['Kawka z mleczkiem', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture],
+        ['Parking pod Budynkiem Głównym', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture],
+        ['Parking pod pawilonem sportowo-dydaktycznym', '...', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Ustronie/uek_pawilon_ustronie10.jpg" />', infoWindowStyleLargePicture]
     ];
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
@@ -95,7 +108,7 @@ function initMap() {
         ['Przystanek autobusowy Brodowicza', 50.069095, 19.961083, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[14], 'stop'],
         ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.068377, 19.952605, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[15], 'stop'],
         ['Przystanek tramwajowy Uniwersytet Ekonomiczny', 50.067611, 19.952288, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/tramway.png', placeContent[16], 'stop'],
-        ['Budynek Główny', 50.068410, 19.954111, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/orange_MarkerB.png', placeContent[17], 'pavilion'],
+        ['Budynek Główny', 50.068505, 19.953935, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/orange_MarkerB.png', placeContent[17], 'pavilion'],
         ['Pawilon Księżówka', 50.069163, 19.954131, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerK.png', placeContent[18], 'pavilion'],
         ['Klub Grota', 50.069213, 19.953986, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/bar.png', placeContent[19], 'food'],
         ['zaUEK', 50.069027, 19.955828, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/coffee.png', placeContent[20], 'food'],
@@ -106,9 +119,22 @@ function initMap() {
         ['Basen UEK', 50.067861, 19.956895, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/swimming2.png', placeContent[25], 'sport'],
         ['Dworzec autobusowy Kraków', 50.067809, 19.949147, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/bus.png', placeContent[26], 'transport'],
         ['Dworzec PKP Kraków', 50.067941, 19.947838, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/train.png', placeContent[27], 'transport'],
-        ['Dom Ogrodnika', 50.069095, 19.953464, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/police.png', placeContent[28], 'pavilion'],
+        ['Dom Ogrodnika', 50.069095, 19.953464, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/garden.png', placeContent[28], 'pavilion'],
         ['Pętla autobusowa Dworzec Główny Wschód', 50.068590, 19.949332, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/busstop.png', placeContent[29], 'stop'],
-        ['Galeria Krakowska', 50.067239, 19.946073, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/mall.png', placeContent[30], 'shop']
+        ['Galeria Krakowska', 50.067239, 19.946073, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/mall.png', placeContent[30], 'shop'],
+        ['Stróżówka', 50.068327, 19.952883, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/police.png', placeContent[31], 'other'],
+        ['Paczkomat InPost', 50.069316, 19.953608, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/post.png', placeContent[32], 'other'],
+        ['Parking podziemny UEK', 50.068623, 19.957292, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/parking.png', placeContent[33], 'other'],
+        ['SJO UEK', 50.068445, 19.956759, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/sjo.png', placeContent[34], 'other'],
+        ['Wejście na UEK', 50.067567, 19.955650, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/entrance.png', placeContent[35], 'entrance'],
+        ['Wejście na UEK', 50.068738, 19.953106, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/entrance.png', placeContent[36], 'entrance'],
+        ['Wejście na UEK', 50.069211, 19.953500, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/entrance.png', placeContent[37], 'entrance'],
+        ['Wejście na UEK', 50.068541, 19.958013, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/entrance.png', placeContent[38], 'entrance'],
+        ['Stołówka', 50.068126, 19.955666, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/restaurant.png', placeContent[39], 'food'],
+        ['Boisko', 50.068350, 19.954848, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/basketballfield.png', placeContent[40], 'sport'],
+        ['Kawka z mleczkiem', 50.069133, 19.955172, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/coffee.png', placeContent[41], 'food'],
+        ['Parking pod Budynkiem Głównym', 50.068054, 19.954270, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/parking.png', placeContent[42], 'other'],
+        ['Parking pod pawilonem sportowo-dydaktycznym', 50.068008, 19.955988, 'http://v-ie.uek.krakow.pl/~s187161/CustomMarkers/parking.png', placeContent[43], 'other']
     ];
 
     var infoWindow = [];
@@ -188,6 +214,28 @@ function showSportObjects() {
         }
         for (var i = 0; i < markers.length; i++) {
             if (markers[i].id === "sport") {
+                markers[i].setVisible(true);
+            }
+        }
+        
+    }
+function showEntrances() {
+         for (var i = 0; i < markers.length; i++) {
+            markers[i].setVisible(false);
+        }
+        for (var i = 0; i < markers.length; i++) {
+            if (markers[i].id === "entrance") {
+                markers[i].setVisible(true);
+            }
+        }
+        
+    }
+function showOther() {
+         for (var i = 0; i < markers.length; i++) {
+            markers[i].setVisible(false);
+        }
+        for (var i = 0; i < markers.length; i++) {
+            if (markers[i].id === "other") {
                 markers[i].setVisible(true);
             }
         }
