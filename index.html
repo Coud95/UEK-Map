@@ -49,7 +49,7 @@
             <div id="floating-panel">
                 <b>Początek trasy: </b>
                 <select id="start">
-        <option value="0">Biblioteka Główna UEK</option>
+    <option value="0">Biblioteka Główna UEK</option>
       <option value="1">Pawilon A</option>
       <option value="2">Pawilon B</option>
       <option value="3">Pawilon C</option>
@@ -147,9 +147,9 @@
         </div>
         <div class="col-sm-3 sidenav" id="search">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Szukaj miejsca..">
+                <input type="search" id="find" class="form-control" onsearch="findPlace();" placeholder="Szukaj miejsca..">
                 <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
+          <button class="btn btn-default" onclick="findPlace();" type="button">
             <span class="glyphicon glyphicon-search"></span>
                 </button>
                 </span>

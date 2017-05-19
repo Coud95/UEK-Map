@@ -65,8 +65,8 @@ function initMap() {
         ['Sklep', '- dostępne są w nim artykuł spożywcze, papiercznie oraz inne rzeczy, które znajdziemy w większości kiosków.', '<img class="placeImage" src="http://i.imgur.com/UK08wzn.jpg" />', infoWindowStyleLargePicture],
         ['Kort tenisowy', '- znajduje się pomiędzy pawilonem Ustronie a Budynek Głównym.', '<img class="placeImage" src="http://i.imgur.com/0lorrXx.jpg" />', infoWindowStyleLargePicture],
         ['Basen UEK', '- jest dostępny dla studentów w ramach zajęć WF lub odpłatnie. Wejście znajduje się na wprost od wejścia do pawilonu Sportowo-dydaktycznego. ', '<img class="placeImage" src="http://ftppromocja.uek.krakow.pl/Zdjecia%20UEK/pawilon%20Sportowy/uek_basen01.jpg" />', infoWindowStyleLargePicture],
-        ['Dworzec autobusowy Kraków', '...', '<img class="placeImage" src="http://mda.malopolska.pl/upload/_PUL4247%20kopia(1).jpg" />', infoWindowStyleLargePicture],
-        ['Dworzec PKP Kraków', '...', '<img class="placeImage" src="http://pkpsa.pl/images/miasta/940x653xIMG_0246_1.jpg.pagespeed.ic.ClnT-eEpxG.jpg" />', infoWindowStyleLargePicture],
+        ['Dworzec autobusowy Kraków', '- zlokalizowany jest przy ul. Bosackiej 18 w samym centrum miasta. Posiada 39 stanowisk na konstrukcji dwupoziomowej. Infrastruktura dworca składa się łącznie z 37 stanowisk odjazdowych na których realizowane są odprawy pasażerskie, 2 stanowisk wysiadkowych oraz budynku dworca stanowiącego zaplecze usługowo – biurowe. Dworzec został oddany do użytku w listopadzie 2005 r., zastępując dotychczasowy, w miejscu którego powstało centrum handlowe Galeria Krakowska. Budowa dworca stanowiła realizację części przedsięwzięcia koncepcyjno-architektonicznego pod nazwą Krakowskie Centrum Komunikacyjne.', '<img class="placeImage" src="http://mda.malopolska.pl/upload/_PUL4247%20kopia(1).jpg" />', infoWindowStyleLargePicture],
+        ['Dworzec PKP Kraków', '- stacja kolejowa w Krakowie, będąca jedną z najważniejszych w południowej Polsce, obsługująca połączenia lokalne i dalekobieżne w ruchu krajowym i międzynarodowym. Według kategoryzacji PKP ma najwyższą kategorię A.', '<img class="placeImage" src="http://pkpsa.pl/images/miasta/940x653xIMG_0246_1.jpg.pagespeed.ic.ClnT-eEpxG.jpg" />', infoWindowStyleLargePicture],
         ['Dom Ogrodnika', '- znajduje się przy wyjeździe z UEK.', '<img class="placeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Akademia_Ekonomiczna_w_Krakowie_Pawilon_H.JPG/250px-Akademia_Ekonomiczna_w_Krakowie_Pawilon_H.JPG" />', infoWindowStyle],
         ['Pętla autobusowa Dworzec Główny Wschód', '<br><br><a href="http://rozklady.mpk.krakow.pl/?lang=PL&akcja=przystanek&rozklad=20170513&przystanek=RHdvcnplYyBHxYLDs3dueSBXc2Now7Nk" target="_blank">Rozkład jazdy</a>', '<img class="placeImage" src="http://kgnat.pl/album56_mpk2014/mpk2014/25_dworzec.jpg" />', infoWindowStyle],
         ['Galeria Krakowska', '- galeria handlowa w Krakowie, zlokalizowana przy ul. Pawiej, po zachodniej stronie Dworca Głównego, z którym jest połączona podziemnym tunelem. Galeria Krakowska to jedna z kilku budowli, znajdujących się w projekcie tzw. Nowego Miasta. Budowę rozpoczęto 12 października 2004 roku, a otwarcie nastąpiło 28 września 2006 r.[1]. Na otwarciu galerii pojawiło się około 53 tys. osób. Wraz z galerią wybudowano hotel Andel. Znajduje się on obok głównego wejścia i ma charakterystyczny geometryczny kształt.', '<img class="placeImage" src="http://www.galeriakrakowska.pl/thumbs/resize/900x0/i/filemanager/obiekty/picture/obiekt_457/STA_5737.JPG" />', infoWindowStyleLargePicture],
@@ -269,5 +269,19 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     });
 }
 
+function findPlace(){
+    var place = document.getElementById('find').value;
+    var placeUpperCase = place.toUpperCase();
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
+    }
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].title.toUpperCase().includes(placeUpperCase)) {
+            markers[i].setVisible(true);
+        }
+    }
+
+
+}
 
 
