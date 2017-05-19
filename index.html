@@ -41,11 +41,109 @@
         $(document).ready(function () {
             initMap();
         });
-
     </script>
+
     <div id="content">
         <div class="col-sm-9">
             <div id="map" class="container-fluid"></div>
+            <div id="floating-panel">
+                <b>Początek trasy: </b>
+                <select id="start">
+        <option value="0">Biblioteka Główna UEK</option>
+      <option value="1">Pawilon A</option>
+      <option value="2">Pawilon B</option>
+      <option value="3">Pawilon C</option>
+      <option value="4">Pawilon D</option>
+      <option value="5">Pawilon E</option>
+      <option value="6">Pawilon F</option>
+      <option value="7">Pawilon G</option>
+      <option value="8">Pawilon Ustronie</option>
+      <option value="9">Pawilon Sportowo-dydaktyczny</option>
+      <option value="10">Przystanek autobusowy Uniwersytet Ekonomiczny</option>
+      <option value="11">Przystanek autobusowy Uniwersytet Ekonomiczny</option>
+      <option value="12">Przystanek autobusowy Rondo Mogilskie</option>
+      <option value="13">Przystanek autobusowy Rondo Mogilskie</option>
+      <option value="14">Przystanek autobusowy Brodowicza</option>
+      <option value="15">Przystanek tramwajowy Uniwersytet Ekonomiczny</option>
+      <option value="16">Przystanek tramwajowy Uniwersytet Ekonomiczny</option>
+      <option value="17">Budynek Główny</option>
+      <option value="18">Pawilon Księżówka</option>
+      <option value="19">Klub Grota</option>
+      <option value="20">zaUEK</option>
+      <option value="21">Pokusa</option>
+      <option value="22">Bułka z makiem</option>
+      <option value="23">Sklep</option>
+      <option value="24">Kort tenisowy</option>
+      <option value="25">Basen UEK</option>
+      <option value="26">Dworzec autobusowy Kraków</option>
+      <option value="27">Dworzec PKP Kraków</option>
+      <option value="28">Dom Ogrodnika</option>
+      <option value="29">Pętla autobusowa Dworzec Główny Wschód</option>
+      <option value="30">Galeria Krakowska</option>
+      <option value="31">Stróżówka</option>
+      <option value="32">Paczkomat InPost</option>
+      <option value="33">Parking podziemny UEK</option>
+      <option value="34">SJO UEK</option>
+      <option value="35">Wejście na UEK(Lubomirskiego) </option>
+      <option value="36">Wejście na UEK(Rakowicka)</option>
+      <option value="37">Wejście na UEK(Rakowicka, samochody)</option>
+      <option value="38">Wejście na UEK(Beliny-Prażmowskiego)</option>
+      <option value="39">Stołówka</option>
+      <option value="40">Boisko</option>
+      <option value="41">Kawka i mleczko</option>
+      <option value="42">Parking pod Budynkiem Głównym</option>
+      <option value="43">Parking pod pawilonem sportowo-dydaktycznym</option>
+      <option value="44">Siłownia</option>
+    </select>
+                <b>Koniec trasy: </b>
+                <select id="end">
+       <option value="0">Biblioteka Główna UEK</option>
+      <option value="1">Pawilon A</option>
+      <option value="2">Pawilon B</option>
+      <option value="3">Pawilon C</option>
+      <option value="4">Pawilon D</option>
+      <option value="5">Pawilon E</option>
+      <option value="6">Pawilon F</option>
+      <option value="7">Pawilon G</option>
+      <option value="8">Pawilon Ustronie</option>
+      <option value="9">Pawilon Sportowo-dydaktyczny</option>
+      <option value="10">Przystanek autobusowy Uniwersytet Ekonomiczny</option>
+      <option value="11">Przystanek autobusowy Uniwersytet Ekonomiczny</option>
+      <option value="12">Przystanek autobusowy Rondo Mogilskie</option>
+      <option value="13">Przystanek autobusowy Rondo Mogilskie</option>
+      <option value="14">Przystanek autobusowy Brodowicza</option>
+      <option value="15">Przystanek tramwajowy Uniwersytet Ekonomiczny</option>
+      <option value="16">Przystanek tramwajowy Uniwersytet Ekonomiczny</option>
+      <option value="17">Budynek Główny</option>
+      <option value="18">Pawilon Księżówka</option>
+      <option value="19">Klub Grota</option>
+      <option value="20">zaUEK</option>
+      <option value="21">Pokusa</option>
+      <option value="22">Bułka z makiem</option>
+      <option value="23">Sklep</option>
+      <option value="24">Kort tenisowy</option>
+      <option value="25">Basen UEK</option>
+      <option value="26">Dworzec autobusowy Kraków</option>
+      <option value="27">Dworzec PKP Kraków</option>
+      <option value="28">Dom Ogrodnika</option>
+      <option value="29">Pętla autobusowa Dworzec Główny Wschód</option>
+      <option value="30">Galeria Krakowska</option>
+      <option value="31">Stróżówka</option>
+      <option value="32">Paczkomat InPost</option>
+      <option value="33">Parking podziemny UEK</option>
+      <option value="34">SJO UEK</option>
+      <option value="35">Wejście na UEK(Lubomirskiego) </option>
+      <option value="36">Wejście na UEK(Rakowicka)</option>
+      <option value="37">Wejście na UEK(Rakowicka, samochody)</option>
+      <option value="38">Wejście na UEK(Beliny-Prażmowskiego)</option>
+      <option value="39">Stołówka</option>
+      <option value="40">Boisko</option>
+      <option value="41">Kawka i mleczko</option>
+      <option value="42">Parking pod Budynkiem Głównym</option>
+      <option value="43">Parking pod pawilonem sportowo-dydaktycznym</option>
+      <option value="44">Siłownia</option>
+    </select>
+            </div>
         </div>
         <div class="col-sm-3 sidenav" id="search">
             <div class="input-group">

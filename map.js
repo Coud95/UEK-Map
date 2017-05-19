@@ -1,6 +1,9 @@
 var markers = [];
+var placeMarkers = [[]];
 function initMap() {
     var uek = { lat: 50.0685492, lng: 19.9549886 };
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: uek,
@@ -15,6 +18,13 @@ function initMap() {
         ]
 
     });
+    directionsDisplay.setMap(map);
+
+    var onChangeHandler = function () {
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+    };
+    document.getElementById('start').addEventListener('change', onChangeHandler);
+    document.getElementById('end').addEventListener('change', onChangeHandler);
     google.maps.event.addDomListener(window, 'resize', function () {
         var center = map.getCenter();
         map.setCenter(center);
@@ -91,7 +101,7 @@ function initMap() {
             '</div>';
     }
     // title, position, icon, content for Infowindow
-    var placeMarkers = [
+    placeMarkers = [
         ['Biblioteka Główna UEK', 50.068585, 19.955923, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/yellow_MarkerB.png', placeContent[0], 'pavilion'],
         ['Pawilon A', 50.069200, 19.954701, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerA.png', placeContent[1], 'pavilion'],
         ['Pawilon B', 50.068835, 19.955398, 'http://v-ie.uek.krakow.pl/~s187161/Google%20Maps%20Markers/darkgreen_MarkerB.png', placeContent[2], 'pavilion'],
@@ -140,7 +150,7 @@ function initMap() {
     ];
 
     var infoWindow = [];
-    
+
     for (var i = 0; i < placeMarkers.length; i++) {
         var placeMarker = placeMarkers[i];
         var marker = new google.maps.Marker({
@@ -162,88 +172,102 @@ function initMap() {
         markers.push(marker);
 
     }
-    
+
     console.log(markers);
 
-   
+
     return markers;
-    
-    
+
+
 
 }
 
 function showPavilion() {
-         for (var i = 0; i < markers.length; i++) {
-            markers[i].setVisible(false);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].id === "pavilion") {
-                markers[i].setVisible(true);
-            }
-        }
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
     }
-
-function showFood() {
-         for (var i = 0; i < markers.length; i++) {
-            markers[i].setVisible(false);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].id === "food") {
-                markers[i].setVisible(true);
-            }
-        }
-    }
-function showAll() {
-         for (var i = 0; i < markers.length; i++) {
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].id === "pavilion") {
             markers[i].setVisible(true);
         }
-        
     }
-function showStops() {
-         for (var i = 0; i < markers.length; i++) {
-            markers[i].setVisible(false);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].id === "stop") {
-                markers[i].setVisible(true);
-            }
-        }
-        
+}
+
+function showFood() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
     }
-function showSportObjects() {
-         for (var i = 0; i < markers.length; i++) {
-            markers[i].setVisible(false);
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].id === "food") {
+            markers[i].setVisible(true);
         }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].id === "sport") {
-                markers[i].setVisible(true);
-            }
-        }
-        
     }
-function showEntrances() {
-         for (var i = 0; i < markers.length; i++) {
-            markers[i].setVisible(false);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].id === "entrance") {
-                markers[i].setVisible(true);
-            }
-        }
-        
-    }
-function showOther() {
-         for (var i = 0; i < markers.length; i++) {
-            markers[i].setVisible(false);
-        }
-        for (var i = 0; i < markers.length; i++) {
-            if (markers[i].id === "other") {
-                markers[i].setVisible(true);
-            }
-        }
-        
+}
+function showAll() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(true);
     }
 
+}
+function showStops() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
+    }
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].id === "stop") {
+            markers[i].setVisible(true);
+        }
+    }
+
+}
+function showSportObjects() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
+    }
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].id === "sport") {
+            markers[i].setVisible(true);
+        }
+    }
+
+}
+function showEntrances() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
+    }
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].id === "entrance") {
+            markers[i].setVisible(true);
+        }
+    }
+
+}
+function showOther() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setVisible(false);
+    }
+    for (var i = 0; i < markers.length; i++) {
+        if (markers[i].id === "other") {
+            markers[i].setVisible(true);
+        }
+    }
+
+}
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    var start = document.getElementById('start').value;
+    var end = document.getElementById('end').value;
+    directionsService.route({
+        origin: {lat: placeMarkers[start][1], lng: placeMarkers[start][2]},
+        destination: {lat: placeMarkers[end][1], lng: placeMarkers[end][2]},
+        travelMode: 'WALKING'
+    }, function (response, status) {
+        if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+}
 
 
 
