@@ -8,6 +8,7 @@ if($title and $description and $email) {
      
     $connection = @mysql_connect('mysql.ct8.pl', 'm2913_Przemek', 'Uek123') 
     or die('Brak połączenia z serwerem MySQL'); 
+    mysql_query("SET NAMES 'utf8'");
     $db = @mysql_select_db('m2913_uekmap', $connection) 
     or die('Nie mogę połączyć się z bazą danych'); 
      
