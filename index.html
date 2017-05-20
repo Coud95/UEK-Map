@@ -23,7 +23,7 @@
             <ul class="nav navbar-nav">
                 <button class="btn btn-primary navbar-btn" onclick="location.reload();">Mapa</button>
                 <button class="btn btn-default navbar-btn" onclick="suggestions();">Sugestie</button>
-                <button class="btn btn-default navbar-btn" onclick="authors();">Autorzy</button>
+                <button class="btn btn-default navbar-btn" onclick="about();">O stronie</button>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="navbar-text"><b>Kraków:</b> temperatura: <b id="temp"></b>°C, ciśnienie: <b id="pressure"></b> hPa, pogoda: <b id="description"></b></li>
@@ -203,8 +203,8 @@
             function suggestions() {
                 $("#content").load("suggestions.php");
             }
-            function authors() {
-                $("#content").load("authors.html");
+            function about() {
+                $("#content").load("about.html");
             }
         </script>
 

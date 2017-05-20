@@ -1,7 +1,7 @@
 <html>
 
 <body>
-    
+ <div id="suggestions">   
     <form action="suggestion.php" method="post">
         <div class="form-group">  
                     <label for="title">Miejsce:</label>
@@ -10,10 +10,10 @@
                     <textarea class="form-control" id="TextArea" rows="5" name="description"></textarea>
                     <label for="email">Adres e-mail:</label>
                     <input type="email" class="form-control" id="email" name="email">
+                    <br>
                     <button type="submit" class="btn btn-default">Wyślij</button>
                 </div>
     </form>
-    
     <?php 
         $connection = @mysql_connect('mysql.ct8.pl', 'm2913_Przemek', 'Uek123') 
         or die('Brak połączenia z serwerem MySQL'); 
@@ -27,12 +27,12 @@
         if(mysql_num_rows($wynik) > 0) { 
             echo "<div class='container'>";
             echo "<h3>Ostatnio dodane sugestie:</h3>";
-            echo "<table class='table'>";
+            echo "<table class='table table-striped'>";
             echo "<thead>";
             echo "<tr>";
             echo "<th>Miejsce</th>";
             echo "<th>Opis</th>";
-            echo "<th>Email</th>";
+            echo "<th>Adres e-mail</th>";
             echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
@@ -49,7 +49,7 @@
         } 
     ?>
 
- 
+ </div>
 </body>
  
 </html>
