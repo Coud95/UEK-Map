@@ -10,20 +10,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="Stylesheet" type="text/css" href="style.css" />
 
 </head>
 
-<body>
+<body ng-app="menu">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand">UEK Map</a>
             </div>
             <ul class="nav navbar-nav">
-                <button class="btn btn-primary navbar-btn" onclick="location.reload();">Mapa</button>
-                <button class="btn btn-default navbar-btn" onclick="suggestions();">Sugestie</button>
-                <button class="btn btn-default navbar-btn" onclick="authors();">Autorzy</button>
+                <div ng-controller="navbar">
+                    <button class="btn btn-primary navbar-btn" ng-click="map()">Mapa</button>
+                    <button class="btn btn-default navbar-btn" ng-click="suggestions()">Sugestie</button>
+                    <button class="btn btn-default navbar-btn" ng-click="about()">O stronie</button>
+                </div>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="navbar-text"><b>Kraków:</b> temperatura: <b id="temp"></b>°C, ciśnienie: <b id="pressure"></b> hPa, pogoda: <b id="description"></b></li>
@@ -50,7 +53,7 @@
         </div>
         <div class="col-sm-3 sidenav" id="search">
             <div class="input-group">
-                <input type="search" id="find" class="form-control" onsearch="findPlace();"  placeholder="Szukaj miejsca...">
+                <input type="search" id="find" class="form-control" onsearch="findPlace();" placeholder="Szukaj miejsca...">
                 <span class="input-group-btn">
         <button class="btn btn-secondary" type="button" onclick="findPlace();"><span class="glyphicon glyphicon-search"></span></button>
                 </span>
@@ -133,7 +136,7 @@
                         <option value="34">SJO UEK</option> 
                     </optgroup>
       </select>
-                 <label for="end">Koniec trasy:</label>
+                <label for="end">Koniec trasy:</label>
                 <select class="form-control" id="end">
                     <option value="" disabled selected>Wybierz kategorie</option>
                     <optgroup label="Pawilony">
@@ -200,12 +203,20 @@
 
 
         <script>
-            function suggestions() {
-                $("#content").load("suggestions.html");
-            }
-            function authors() {
-                $("#content").load("authors.html");
-            }
+           
+
+            angular.module('menu', [])
+                .controller('navbar', ['$scope', function ($scope) {
+                    $scope.suggestions = function () {
+                        $("#content").load("suggestions.php");
+                    };
+                    $scope.about = function () {
+                        $("#content").load("about.html");
+                    };
+                    $scope.map = function () {
+                        location.reload();
+                    };
+                }]);
         </script>
 
 </body>
