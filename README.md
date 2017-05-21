@@ -21,26 +21,26 @@ Rafał Kwiecień 187161 KrDZIs3011Io
 
 Aplikacja zawiera 3 główne moduły.
 
-###Mapa
+### Mapa
 
 Mapa jest domyślnie zlokalizowana na Uniwersytet Ekonomiczny w Krakowie. Znajdują się na niej markery dotyczące ważniejszych miejsc na UEKu.
 
-####Markery na mapie
+#### Markery na mapie
 W momencie nakierowania kursora na marker wyświetla się nazwa miejsca z nim skojarzonego. Po kliknięciu na marker wyświetla się okno informacyjne dotyczące miejsca przypisanego do markera. Zawiera ono nazwę miejsca, zdjęcie oraz opis miejsca.
-####Wyszukiwarka
+#### Wyszukiwarka
 Wyszukiwarka służy do wyszukiwania konkretnych markerów(miejsc) na mapie. Po wpisaniu pełnej frazy (np. "pawilon", "parking") lub nawet niepełnej (np. "skle", "bibli") i wciśnieciu klawisza Enter(lub kliknięcia na znajdującą się obok ikonkę lupy) na mapie pozostaną wyszukane przez użytkownika miejsca.
-####Kategorie miejsc
+#### Kategorie miejsc
 Pole wyboru kategorii miejsc znajdujące się pod etykietą "Wybierz rodzaj miejsca:" umożliwia poprzez kliknięcie na daną nazwę kategorii 
 wyświetlenie jedynie interesujących użytkownika lokacji.(np. wyboór kategorii "Sport" wyświetli tylko miejsca związane ze sportem na UEKu)
-####Trasy
+#### Trasy
 Użytkownik ma do dyspozycji dwa pola wyboru, jedno zawiera początek trasy, a drugie jej koniec. Po wybraniu punktu początkowego z pierwszego menu oraz punktu końcowego wyświetli się trasa.
 
-###Sugestie
+### Sugestie
 
 Ta część aplikacji umożliwia użytkownikowi wysłanie sugestii do autorów. 
 Użytkownik wypełnia pola z nazwą miejsca, opisem miejsca oraz podaje swój e-mail. Po kliknięcie przycisku "Wyślij" użytkownik zostaje przekierowany do mapy, a sugestia zostaje wysłana do bazy danych i umieszczona jako ostatnio dodana sugestia w tymże module,  
 
-###O stronie
+### O stronie
 
 Zawiera krótki opis aplikacji oraz dane autorów.
 
