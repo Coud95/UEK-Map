@@ -88,7 +88,7 @@ function initMap() {
     var placeContent = [];
     for (var i = 0; i < contents.length; i++) {
         var content = contents[i];
-        placeContent[i] = content[3] + '<div id="infoContent">' +
+        placeContent[i] =  content[3] + '<div id="infoContent">' +
             '<div id="siteNotice">' +
             '</div>' +
             '<h1 id="firstHeading" class="firstHeading">' + content[0] + '</h1>' +

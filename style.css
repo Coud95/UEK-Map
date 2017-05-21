@@ -1,4 +1,8 @@
 #map {
-            height: 500px;
-        }
- 
+    height: 500px;
+}
+
+#suggestions { 
+    width: 80%;
+    margin: 0 auto;
+}
